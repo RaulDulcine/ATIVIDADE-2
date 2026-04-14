@@ -1,0 +1,11 @@
+class Produto:
+      def __init__(self, nome, quantidade):
+        self.nome = nome
+        self.quantidade = quantidade
+  
+      def mostrar_dados(self):
+        print(f"{self.nome} | {self.quantidade}")
+  
+
+p1 = Produto("Teclado", 5)
+p1.mostrar_dados()
