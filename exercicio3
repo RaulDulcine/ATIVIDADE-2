@@ -1,0 +1,7 @@
+class Produto:
+    def __init__(self, nome, quantidade):
+        self.nome = nome
+        self.quantidade = quantidade
+
+p1 = Produto("Mouse", 10)
+print(p1.nome)
