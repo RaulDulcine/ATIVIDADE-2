@@ -1,0 +1,27 @@
+class Estoque:
+    def __init__(self):
+        self.produtos = []
+
+    def adicionar_produto(self, produto):
+        self.produtos.append(produto)
+
+    def procurar_produto(self):
+        nome_busca = input("Digite o nome do produto que deseja procurar: ").lower()
+
+        for produto in self.produtos:
+            if produto["nome"].lower() == nome_busca:
+                print(f"\nProduto encontrado:")
+                print(f"Nome: {produto['nome']}")
+                print(f"Preço: R${produto['preco']}") 
+                print(f"Quantidade: {produto['quantidade']}\n")
+                return
+
+        print("Produto não encontrado.\n")
+
+meu_estoque = Estoque()
+
+meu_estoque.adicionar_produto({"nome": "Skyrim", "preco": 50.00, "quantidade": 10})
+meu_estoque.adicionar_produto({"nome": "Dark Souls III", "preco": 80.00, "quantidade": 5})
+meu_estoque.adicionar_produto({"nome": "Resident Evil 2", "preco": 60.00, "quantidade": 5})
+
+meu_estoque.procurar_produto()
